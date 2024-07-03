@@ -7,6 +7,8 @@ import img5 from "../assets/certificate5.png";
 import img6 from "../assets/certificate6.png";
 import img7 from "../assets/certificate7.png";
 import img8 from "../assets/certificate8.png";
+import img10 from "../assets/certificate10.jpg";
+
 import { Box, Typography } from "@mui/material";
 import { Masonry } from "@mui/lab";
 import { TitleBox } from "../themes";
