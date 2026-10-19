@@ -7,7 +7,7 @@ export const Footer = () => {
     <StyledFooter>
       <StyledContainer>
         <Box>
-          <IconButton href="tel:+20 106 403 3137" color="primary">
+          <IconButton href="tel:+966 56 287 3351" color="primary">
             <WhatsApp />
           </IconButton>
           <IconButton href="mailto:saraismail4255@gmail.com" color="primary">

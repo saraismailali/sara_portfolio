@@ -16,9 +16,9 @@ export interface EducationItem {
 
 const educations: EducationItem[] = [
   {
-    institution: "Faculty of Computer and Data Science",
-    degree: "Alexandria University",
-    period: "2019 - 2023",
+    institution: "Alexandria University",
+    degree: "Bachelor of Data Science, Major in Computing and Data Science",
+    period: "08/2019 - 06/2023",
     location: "Alexandria, Egypt",
     svg: education_svg,
   },
@@ -67,6 +67,9 @@ export const EducationSection: React.FC = () => {
                   sx={{ fontWeight: "bold", mb: 1 }}
                 >
                   {education.institution}
+                </Typography>
+                <Typography variant="body1" sx={{ mb: 1 }}>
+                  {education.degree}
                 </Typography>
                 <TypographyWithBorder variant="body1" sx={{ mb: 1 }}>
                   <Icon component={EventIcon} sx={{ fontSize: 20, mr: 1 }} />

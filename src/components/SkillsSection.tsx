@@ -2,20 +2,30 @@ import { Box, styled, Typography } from "@mui/material";
 import React from "react";
 import Atropos from "atropos/react";
 import {
-  StorageOutlined,
   BarChartOutlined,
   InsertChartOutlined,
-  CodeOutlined,
-  FunctionsOutlined,
-  LocalDiningOutlined,
-  AnalyticsOutlined,
-  EmojiObjectsOutlined,
-  GrainOutlined,
-  FilterListOutlined,
-  AccountTreeOutlined,
-  LayersOutlined,
+  DashboardOutlined,
   PlaylistAddCheckOutlined,
   BuildOutlined,
+  GrainOutlined,
+  AutoStoriesOutlined,
+  StorageOutlined,
+  TableChartOutlined,
+  CodeOutlined,
+  FunctionsOutlined,
+  AccountTreeOutlined,
+  AnalyticsOutlined,
+  BubbleChartOutlined,
+  ShowChartOutlined,
+  CategoryOutlined,
+  PsychologyOutlined,
+  TrendingUpOutlined,
+  EmojiObjectsOutlined,
+  SearchOutlined,
+  ForumOutlined,
+  AssessmentOutlined,
+  GroupsOutlined,
+  InsightsOutlined,
 } from "@mui/icons-material";
 import { Masonry } from "@mui/lab";
 import { TitleBox } from "../themes";
@@ -26,76 +36,108 @@ export interface Skill {
 }
 const skills: Skill[] = [
   {
-    name: "MySQL",
-    icon: <StorageOutlined fontSize="large" />,
-  },
-  {
     name: "Power BI",
     icon: <BarChartOutlined fontSize="large" />,
   },
   {
-    name: "Excel",
+    name: "Excel (PivotTables, Power Query)",
     icon: <InsertChartOutlined fontSize="large" />,
   },
   {
-    name: "Python",
-    icon: <CodeOutlined fontSize="large" />,
-  },
-  {
-    name: "R",
-    icon: <FunctionsOutlined fontSize="large" />,
-  },
-  {
-    name: "HTML/CSS",
-    icon: <LocalDiningOutlined fontSize="large" />,
-  },
-  {
-    name: "PHP",
-    icon: <AnalyticsOutlined fontSize="large" />,
-  },
-  {
-    name: "JavaScript",
-    icon: <EmojiObjectsOutlined fontSize="large" />,
-  },
-  {
-    name: "SAS Viya",
-    icon: <StorageOutlined fontSize="large" />,
-  },
-  {
-    name: "Machine Learning",
-    icon: <BarChartOutlined fontSize="large" />,
-  },
-  {
-    name: "Data Modeling",
-    icon: <GrainOutlined fontSize="large" />,
-  },
-  {
-    name: "Data Visualization",
-    icon: <FilterListOutlined fontSize="large" />,
-  },
-  {
-    name: "Web Scraping",
-    icon: <AccountTreeOutlined fontSize="large" />,
-  },
-  {
-    name: "Data Wrangling",
-    icon: <LayersOutlined fontSize="large" />,
+    name: "Tableau",
+    icon: <DashboardOutlined fontSize="large" />,
   },
   {
     name: "Data Warehousing",
     icon: <PlaylistAddCheckOutlined fontSize="large" />,
   },
   {
-    name: "Data Architecture",
+    name: "ETL",
     icon: <BuildOutlined fontSize="large" />,
   },
   {
-    name: "Data Preparation",
+    name: "Data Modeling",
+    icon: <GrainOutlined fontSize="large" />,
+  },
+  {
+    name: "Dashboard Development",
+    icon: <DashboardOutlined fontSize="large" />,
+  },
+  {
+    name: "Data Storytelling",
+    icon: <AutoStoriesOutlined fontSize="large" />,
+  },
+  {
+    name: "MySQL",
     icon: <StorageOutlined fontSize="large" />,
   },
   {
-    name: "ETL",
-    icon: <BarChartOutlined fontSize="large" />,
+    name: "PostgreSQL",
+    icon: <StorageOutlined fontSize="large" />,
+  },
+  {
+    name: "SQL (queries, joins, optimization)",
+    icon: <TableChartOutlined fontSize="large" />,
+  },
+  {
+    name: "Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)",
+    icon: <CodeOutlined fontSize="large" />,
+  },
+  {
+    name: "R (ggplot2, dplyr)",
+    icon: <FunctionsOutlined fontSize="large" />,
+  },
+  {
+    name: "Web Scraping",
+    icon: <AccountTreeOutlined fontSize="large" />,
+  },
+  {
+    name: "Statistical Analysis",
+    icon: <AnalyticsOutlined fontSize="large" />,
+  },
+  {
+    name: "Clustering",
+    icon: <BubbleChartOutlined fontSize="large" />,
+  },
+  {
+    name: "Regression",
+    icon: <ShowChartOutlined fontSize="large" />,
+  },
+  {
+    name: "Classification",
+    icon: <CategoryOutlined fontSize="large" />,
+  },
+  {
+    name: "Convolutional Neural Networks (CNNs)",
+    icon: <PsychologyOutlined fontSize="large" />,
+  },
+  {
+    name: "Predictive Analytics",
+    icon: <TrendingUpOutlined fontSize="large" />,
+  },
+  {
+    name: "Problem-Solving",
+    icon: <EmojiObjectsOutlined fontSize="large" />,
+  },
+  {
+    name: "Attention to Detail",
+    icon: <SearchOutlined fontSize="large" />,
+  },
+  {
+    name: "Communication",
+    icon: <ForumOutlined fontSize="large" />,
+  },
+  {
+    name: "Reporting",
+    icon: <AssessmentOutlined fontSize="large" />,
+  },
+  {
+    name: "Cross-functional Collaboration",
+    icon: <GroupsOutlined fontSize="large" />,
+  },
+  {
+    name: "Business Intelligence",
+    icon: <InsightsOutlined fontSize="large" />,
   },
 ];
 

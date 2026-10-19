@@ -26,13 +26,38 @@ export interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     title: "Data Analyst",
-    company: "Brand Marketing Agency",
-    period: "08/2023 - Present",
-    location: "Remote",
+    company: "SDC APP",
+    period: "12/2024 - Present",
+    location: "Jeddah, Saudi Arabia",
     description: [
-      "Built Power BI dashboards to visualize core Business KPIs (such as monthly revenues) saving 10 hours per week of manual reporting work.",
-      "Handled large datasets, conducted data cleansing, and gathered information from diverse sources, executing Extract, Transform, Load (ETL) processes.",
+      "Collected and analyzed employee and business data upon request, ensuring leadership had timely insights for decision-making.",
+      "Delivered monthly and quarterly reports with tailored recommendations for each department, integrating insights, funnels, and data generated from UXCam and WebEngage to enable deeper analysis; tracked follow-up actions to ensure execution.",
+      "Held monthly and quarterly meetings with all department leads to review reports, discuss findings, and align on strategic actions.",
+      "Developed new dashboards and visualizations (Using power BI) with KPIs aligned to business goals, enabling teams to track performance and improving reporting efficiency by 80%.",
+      "Conducted monthly and quarterly performance analyses, delivering insights that increased sales conversion by 5% and reduced customer churn by 3%.",
+      "Partnered with cross-functional teams to close performance gaps, driving a 7% increase in quarterly revenue.",
+      "Boosted dashboard adoption by 40%, strengthening a data-driven decision-making culture.",
+      "Performed root-cause analysis on data fluctuations and trends, uncovering insights that informed strategic business decisions.",
     ],
+    svg: work1,
+  },
+  {
+    title: "Junior Data Analyst",
+    company: "BM Enterprise Management",
+    period: "08/2023 - 08/2024",
+    location: "Alexandria, Egypt",
+    description: [
+      "Led the transition to a paperless practice by implementing an electronic system and a faster, safer and more accurate business system; reduced cost of paper by 30%.",
+      "Conducted a comprehensive analysis of data from over 100 companies, evaluating various metrics and performance indicators to identify the best insurance company for potential future partnerships and collaborations.",
+    ],
+    svg: work1,
+  },
+  {
+    title: "Cyber Security Intern",
+    company: "Security Meter",
+    period: "08/2022 - 10/2022",
+    location: "Remote",
+    description: [],
     svg: work1,
   },
 ];

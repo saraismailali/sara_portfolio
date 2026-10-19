@@ -11,6 +11,7 @@ import {
 import { alpha, styled } from "@mui/material/styles";
 
 import data_analysis from "../assets/data-analysis-bro.svg";
+import cv from "../assets/SaraIsmailAliCV.pdf";
 
 export interface AboutMeSectionProps {}
 
@@ -24,7 +25,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
             <ImageContainer>
               <img alt="Profile" src={data_analysis} />
               <Overlay>
-                <IconButton href="tel:+20 106 403 3137" color="primary">
+                <IconButton href="tel:+966 56 287 3351" color="primary">
                   <WhatsApp />
                 </IconButton>
                 <IconButton
@@ -60,15 +61,14 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
               about me
             </Typography>
             <Typography variant="body1">
-              Junior data analyst with a proven track record of leveraging data
-              to address business challenges. Proficient in utilizing tools such
-              as Power BI, Excel, MySQL, Python, and R to efficiently gather,
-              clean, analyze, and visualize data. Demonstrated ability to
-              translate complex datasets into actionable insights, contributing
-              to informed decision-making. Keen attention to detail, strong
-              analytical skills, and a commitment to delivering high-quality
-              results. Seeking opportunities to apply my expertise in data
-              analysis to drive strategic business outcomes.
+              Microsoft Certified: Power BI Data Analyst (PL-300) with a strong
+              track record of leveraging data to solve business challenges and
+              support strategic decision-making. Skilled in Power BI, Excel,
+              MySQL, Python, and R for data collection, cleaning, analysis, and
+              visualization. Experienced in transforming complex datasets into
+              actionable insights and performance metrics that drive business
+              outcomes. Known for strong analytical thinking, attention to
+              detail, and delivering high-quality, business-focused results.
             </Typography>
           </TitleBox>
           <InformationContainer container spacing={2}>
@@ -90,13 +90,17 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
                 variant="h5"
                 sx={{ marginInlineEnd: `8px !important` }}
               >
-                Remote Availability:
+                Current Company:
               </Typography>
               <Chip
-                label="Available"
+                label="SDC APP · Data Analyst · Dec 2024 – Present"
                 variant="outlined"
                 color="success"
                 size="small"
+                sx={{
+                  height: "auto",
+                  "& .MuiChip-label": { whiteSpace: "normal" },
+                }}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -108,7 +112,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
             <Grid item xs={12} sm={6}>
               <Typography variant="h5">Location:</Typography>
               <MarginInlineStart variant="body1">
-                Alexandria, Egypt
+                Jeddah, Saudi Arabia
               </MarginInlineStart>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -126,7 +130,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
             <Button
               variant="contained"
               startIcon={<Download />}
-              href="../assets/SaraIsmailAliCV.pdf"
+              href={cv}
               download
             >
               Download CV
@@ -134,7 +138,7 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
             <Button
               variant="outlined"
               endIcon={<Send />}
-              href="tel:+20 106 403 3137"
+              href="tel:+966 56 287 3351"
             >
               Hire Me
             </Button>
