@@ -63,8 +63,8 @@ const PROJECTS: Project[] = [
     metricLabel: "report pages",
     desc: "Cleaned an uncleaned 9-table dataset in Power Query and built a 6-page report with 50+ DAX measures covering trends, discounts, profitability, customer segmentation and city performance.",
     tools: ["Power Query", "DAX", "RANKX", "Segmentation"],
-    video: "/sales-analysis-demo.mp4",
-    poster: "/sales-analysis-demo.jpg",
+    video: "/videos/sales-analysis-demo.mp4",
+    poster: "/videos/sales-analysis-demo.jpg",
   },
   {
     name: "Hotel Revenue Analysis",
@@ -593,6 +593,7 @@ export const Home: React.FC = () => {
               <div className="row-gap">
                 <a className="btn btn-outline-light" href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 <a className="btn btn-outline-light" href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a className="btn btn-outline-light" href="https://wa.me/966562873351" target="_blank" rel="noopener noreferrer">WhatsApp</a>
                 <a className="btn btn-outline-light" href={`tel:${PHONE.replace(/\s/g, "")}`}>{PHONE}</a>
               </div>
             </div>
