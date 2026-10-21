@@ -279,19 +279,22 @@ const SKILLS = [
   { name: "Python & machine learning", gold: false, items: ["pandas", "scikit-learn", "TensorFlow", "R", "Web scraping"] },
 ];
 
-const CERTS = [
-  { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", meta: "Microsoft · 2025", link: "https://learn.microsoft.com/en-gb/users/saraali-1065/credentials/abde942c36385002" },
-  { name: "Business Intelligence Analyst Course", meta: "365 Careers · 2024", link: "https://www.udemy.com/certificate/UC-a10bd0ea-2655-4db0-91ab-740ef59f599c/" },
-  { name: "Thinking Like an Analyst", meta: "Maven Analytics · 2024", link: "https://certificates.mavenanalytics.io/bdf3a464-f42f-4bcd-895a-388e60e05ca1#acc.704b8Jsk" },
-  { name: "Microsoft Power BI Desktop for Business Intelligence", meta: "Udemy · 2023", link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-a4affd34-e899-4870-89a6-157dea7cb8b2.pdf" },
-  { name: "Foundations of Data Science", meta: "Google · Coursera · 2023", link: "https://www.coursera.org/account/accomplishments/verify/Z4FHBEZ4LMSW" },
-  { name: "Business Analytics with Excel", meta: "Johns Hopkins University · Coursera · 2023", link: "https://www.coursera.org/account/accomplishments/certificate/89BYS4C35HR5" },
-  { name: "PostgreSQL Essential Training", meta: "LinkedIn Learning · 2023", link: "https://www.linkedin.com/learning/certificates/132b81c0693bfc071f8dc5bd99c9f6a666178be432e41c7cb7b1e7151e90a615" },
-  { name: "Databases: Relational Databases and SQL", meta: "edX · 2023", link: "https://courses.edx.org/certificates/8eaece324b8c4774934ba4be31caa351" },
-  { name: "Introduction to Databases", meta: "Meta · Coursera · 2023", link: "https://www.coursera.org/account/accomplishments/certificate/EHCH5UQ5CW8B" },
-  { name: "Understanding Data Engineering", meta: "DataCamp · 2023", link: "https://www.datacamp.com/statement-of-accomplishment/course/b32ee40a4fba66e55070bbfa0fd11b316fc0bf4b" },
-  { name: "Intermediate Importing Data in Python", meta: "DataCamp · 2023", link: "https://www.datacamp.com/statement-of-accomplishment/course/8736ce0997163ab48916fff85688791ba31ad7f9" },
-  { name: "Introduction to Programming Using Python", meta: "New Horizons · 2019", link: "https://drive.google.com/file/d/1r5JebFJ1n9avNRKpwcRdT2AGFyZw5Kqc/view" },
+interface Cert { name: string; issuer: string; date: string; link?: string; img: string; thumb: string; badge?: boolean }
+
+const CERTS: Cert[] = [
+  { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", issuer: "Microsoft", date: "2025", link: "https://learn.microsoft.com/en-gb/users/saraali-1065/credentials/abde942c36385002", img: "/certificates/pl-300.svg", thumb: "/certificates/pl-300.svg", badge: true },
+  { name: "Thinking Like an Analyst", issuer: "Maven Analytics", date: "Oct 2024", link: "https://certificates.mavenanalytics.io/bdf3a464-f42f-4bcd-895a-388e60e05ca1#acc.704b8Jsk", img: "/certificates/thinking-like-an-analyst.webp", thumb: "/certificates/thinking-like-an-analyst-thumb.webp" },
+  { name: "Business Intelligence Analyst Course", issuer: "365 Careers · Udemy", date: "Jul 2024", link: "https://www.udemy.com/certificate/UC-a10bd0ea-2655-4db0-91ab-740ef59f599c/", img: "/certificates/bi-analyst-365.webp", thumb: "/certificates/bi-analyst-365-thumb.webp" },
+  { name: "PostgreSQL Essential Training", issuer: "LinkedIn Learning", date: "Nov 2023", link: "https://www.linkedin.com/learning/certificates/132b81c0693bfc071f8dc5bd99c9f6a666178be432e41c7cb7b1e7151e90a615", img: "/certificates/postgresql.webp", thumb: "/certificates/postgresql-thumb.webp" },
+  { name: "Understanding Data Engineering", issuer: "DataCamp", date: "Oct 2023", link: "https://www.datacamp.com/statement-of-accomplishment/course/b32ee40a4fba66e55070bbfa0fd11b316fc0bf4b", img: "/certificates/data-engineering.webp", thumb: "/certificates/data-engineering-thumb.webp" },
+  { name: "Microsoft Power BI Desktop for Business Intelligence", issuer: "Maven Analytics · Udemy", date: "Oct 2023", link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-a4affd34-e899-4870-89a6-157dea7cb8b2.pdf", img: "/certificates/power-bi-desktop.webp", thumb: "/certificates/power-bi-desktop-thumb.webp" },
+  { name: "Intermediate Importing Data in Python", issuer: "DataCamp", date: "Sep 2023", link: "https://www.datacamp.com/statement-of-accomplishment/course/8736ce0997163ab48916fff85688791ba31ad7f9", img: "/certificates/importing-data-python.webp", thumb: "/certificates/importing-data-python-thumb.webp" },
+  { name: "Business Analytics with Excel", issuer: "Johns Hopkins University · Coursera", date: "Sep 2023", link: "https://www.coursera.org/account/accomplishments/certificate/89BYS4C35HR5", img: "/certificates/jhu-excel.webp", thumb: "/certificates/jhu-excel-thumb.webp" },
+  { name: "Foundations of Data Science", issuer: "Google · Coursera", date: "Sep 2023", link: "https://www.coursera.org/account/accomplishments/verify/Z4FHBEZ4LMSW", img: "/certificates/google-data-science.webp", thumb: "/certificates/google-data-science-thumb.webp" },
+  { name: "Introduction to Databases", issuer: "Meta · Coursera", date: "Sep 2023", link: "https://www.coursera.org/account/accomplishments/certificate/EHCH5UQ5CW8B", img: "/certificates/meta-databases.webp", thumb: "/certificates/meta-databases-thumb.webp" },
+  { name: "Databases: Relational Databases and SQL", issuer: "Stanford Online · edX", date: "Jul 2023", link: "https://courses.edx.org/certificates/8eaece324b8c4774934ba4be31caa351", img: "/certificates/edx-databases.webp", thumb: "/certificates/edx-databases-thumb.webp" },
+  { name: "Cyber Security Diploma Course", issuer: "Security Meter", date: "Oct 2022", img: "/certificates/cyber-security.webp", thumb: "/certificates/cyber-security-thumb.webp" },
+  { name: "Introduction to Programming Using Python", issuer: "New Horizons", date: "Dec 2019", link: "https://drive.google.com/file/d/1r5JebFJ1n9avNRKpwcRdT2AGFyZw5Kqc/view", img: "/certificates/new-horizons-python.webp", thumb: "/certificates/new-horizons-python-thumb.webp" },
 ];
 
 /* ------------------------------------------------------------------ */
@@ -384,6 +387,18 @@ const Send = () => (
 export const Home: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">(readStoredTheme);
   const [filter, setFilter] = useState<"All" | Tool>("All");
+  const [certOpen, setCertOpen] = useState<number | null>(null);
+  useEffect(() => {
+    if (certOpen === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setCertOpen(null);
+      if (e.key === "ArrowRight") setCertOpen((certOpen + 1) % CERTS.length);
+      if (e.key === "ArrowLeft") setCertOpen((certOpen + CERTS.length - 1) % CERTS.length);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => { document.removeEventListener("keydown", onKey); document.body.style.overflow = ""; };
+  }, [certOpen]);
   const [job, setJob] = useState(0);
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
@@ -595,36 +610,67 @@ export const Home: React.FC = () => {
           </div>
         </section>
 
-        {/* CERTIFICATIONS + EDUCATION */}
-        <section id="certifications" className="section certs-row">
-          <div className="certs">
-            <div className="section-head">
-              <span className="eyebrow">CERTIFICATIONS</span>
-              <h2>Verified credentials</h2>
-            </div>
-            <div className="cert-list">
-              {CERTS.map((c) => (
-                <a key={c.name} href={c.link} target="_blank" rel="noopener noreferrer" className="cert">
-                  <strong>{c.name}</strong>
-                  <span className="mono muted small">{c.meta} ↗</span>
-                </a>
-              ))}
-            </div>
+        {/* CERTIFICATIONS */}
+        <section id="certifications" className="section">
+          <div className="section-head">
+            <span className="eyebrow">CERTIFICATIONS</span>
+            <h2>Verified credentials</h2>
+            <p className="muted">Click a certificate to view it full size, or open the credential to verify it.</p>
           </div>
-          <div className="edu">
-            <div className="section-head">
-              <span className="eyebrow">EDUCATION</span>
-              <h2>Degree</h2>
-            </div>
-            <Atropos className="tilt" rotateTouch="scroll-y" shadowScale={0.9} highlight>
-            <div className="card">
-              <span className="mono muted tiny">2019 – 2023</span>
-              <h3 className="h-sm">Bachelor of Data Science</h3>
-              <span className="muted">Computing and Data Science · Alexandria University</span>
-            </div>
-            </Atropos>
+          <div className="cert-grid">
+            {CERTS.map((c, i) => (
+              <Atropos className="tilt fadein" key={c.name} rotateTouch="scroll-y" shadowScale={0.9} highlight rotateXMax={10} rotateYMax={10}>
+              <article className={c.badge ? "card cert-card featured" : "card cert-card"}>
+                <button type="button" className={c.badge ? "cert-thumb badge" : "cert-thumb"} onClick={() => setCertOpen(i)} aria-label={`View ${c.name} certificate full size`}>
+                  <img src={c.thumb} alt={`${c.name} certificate – ${c.issuer}`} loading="lazy" decoding="async" />
+                </button>
+                <div className="cert-body">
+                  <h3 className="h-sm">{c.name}</h3>
+                  <span className="mono muted small">{c.issuer} · {c.date}</span>
+                  {c.link ? (
+                    <a className="card-link" href={c.link} target="_blank" rel="noopener noreferrer">View credential <External /></a>
+                  ) : (
+                    <button type="button" className="card-link as-btn" onClick={() => setCertOpen(i)}>View certificate</button>
+                  )}
+                </div>
+              </article>
+              </Atropos>
+            ))}
           </div>
         </section>
+
+        {/* EDUCATION */}
+        <section id="education" className="section">
+          <div className="section-head">
+            <span className="eyebrow">EDUCATION</span>
+            <h2>Degree</h2>
+          </div>
+          <Atropos className="tilt edu-tilt" rotateTouch="scroll-y" shadowScale={0.9} highlight>
+          <div className="card edu-card">
+            <span className="mono muted tiny">2019 – 2023</span>
+            <h3 className="h-sm">Bachelor of Data Science</h3>
+            <span className="muted">Computing and Data Science · Alexandria University</span>
+          </div>
+          </Atropos>
+        </section>
+
+        {certOpen !== null && (
+          <div className="lightbox" role="dialog" aria-modal="true" aria-label={CERTS[certOpen].name} onClick={() => setCertOpen(null)}>
+            <figure onClick={(e) => e.stopPropagation()}>
+              <img src={CERTS[certOpen].img} alt={`${CERTS[certOpen].name} certificate`} className={CERTS[certOpen].badge ? "badge" : ""} />
+              <figcaption>
+                <div>
+                  <strong>{CERTS[certOpen].name}</strong>
+                  <span className="mono small">{CERTS[certOpen].issuer} · {CERTS[certOpen].date}</span>
+                </div>
+                {CERTS[certOpen].link && <a className="btn btn-sm" href={CERTS[certOpen].link} target="_blank" rel="noopener noreferrer">Verify <External /></a>}
+              </figcaption>
+            </figure>
+            <button type="button" className="lb-btn lb-prev" aria-label="Previous certificate" onClick={(e) => { e.stopPropagation(); setCertOpen((certOpen + CERTS.length - 1) % CERTS.length); }}>‹</button>
+            <button type="button" className="lb-btn lb-next" aria-label="Next certificate" onClick={(e) => { e.stopPropagation(); setCertOpen((certOpen + 1) % CERTS.length); }}>›</button>
+            <button type="button" className="lb-btn lb-close" aria-label="Close" onClick={() => setCertOpen(null)}>×</button>
+          </div>
+        )}
 
         {/* CONTACT */}
         <section id="contact" className="section">
