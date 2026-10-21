@@ -129,6 +129,10 @@
 .lift { transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .lift:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--accent); }
 
+/* keep the tilt highlight from widening the page */
+html { overflow-x: hidden; }
+.site { overflow-x: clip; }
+
 /* 3D tilt cards (Atropos) */
 .tilt { height: 100%; }
 .tilt .atropos-scale, .tilt .atropos-rotate, .tilt .atropos-inner { height: 100%; }
