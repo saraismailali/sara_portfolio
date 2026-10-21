@@ -25,23 +25,36 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
             <ImageContainer>
               <img alt="Profile" src={data_analysis} />
               <Overlay>
-                <IconButton href="tel:+966 56 287 3351" color="primary">
+                <IconButton
+                  href="https://wa.me/966562873351"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  color="primary"
+                >
                   <WhatsApp />
                 </IconButton>
                 <IconButton
                   href="mailto:saraismail4255@gmail.com"
+                  aria-label="Email"
                   color="primary"
                 >
                   <Google />
                 </IconButton>
                 <IconButton
                   href="https://github.com/saraismailali"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
                   color="primary"
                 >
                   <GitHub />
                 </IconButton>
                 <IconButton
                   href="https://www.linkedin.com/in/sarrraaali/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
                   color="primary"
                 >
                   <LinkedIn />
@@ -61,17 +74,24 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
               about me
             </Typography>
             <Typography variant="body1">
-              Microsoft Certified: Power BI Data Analyst (PL-300) with a strong
-              track record of leveraging data to solve business challenges and
-              support strategic decision-making. Skilled in Power BI, Excel,
-              MySQL, Python, and R for data collection, cleaning, analysis, and
-              visualization. Experienced in transforming complex datasets into
-              actionable insights and performance metrics that drive business
-              outcomes. Known for strong analytical thinking, attention to
-              detail, and delivering high-quality, business-focused results.
+              Data Analyst with 3 years of experience and a Microsoft Certified:
+              Power BI Data Analyst Associate (PL-300) certification. Builds
+              Power BI dashboards, KPI reporting and performance analyses that
+              have increased sales conversion by 5%, reduced customer churn by
+              3% and contributed to a 7% rise in quarterly revenue. Skilled in
+              SQL (MySQL, PostgreSQL), Excel, Python and R for data collection,
+              cleaning, ETL, data modeling, analysis and visualization.
+              Experienced in turning complex datasets into clear, actionable
+              insights for leadership and cross-functional teams.
             </Typography>
           </TitleBox>
           <InformationContainer container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <Typography variant="h5">Phone:</Typography>
+              <Button variant="text" component="a" href="tel:+966562873351">
+                +966 56 287 3351
+              </Button>
+            </Grid>
             <Grid item xs={12} sm={6}>
               <Typography variant="h5">Name:</Typography>
               <MarginInlineStart variant="body1">
@@ -131,14 +151,14 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
               variant="contained"
               startIcon={<Download />}
               href={cv}
-              download
+              download="Sara_Ismail_Ali_CV.pdf"
             >
               Download CV
             </Button>
             <Button
               variant="outlined"
               endIcon={<Send />}
-              href="tel:+966 56 287 3351"
+              href="#Contact"
             >
               Hire Me
             </Button>

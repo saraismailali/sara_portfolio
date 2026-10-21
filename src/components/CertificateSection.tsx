@@ -154,7 +154,7 @@ export const CertificateSection: React.FC = () => {
   };
 
   return (
-    <Box component="section" id="Education" sx={{ my: 8 }}>
+    <Box component="section" id="Certificates" sx={{ my: 8 }}>
       <TitleBox>
         <Typography variant="h2" component="h2">
           Certificates
@@ -186,6 +186,7 @@ export const CertificateSection: React.FC = () => {
                   size="small"
                   href={certificate.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   sx={{ px: 0 }}
                 >
                   Show Credential

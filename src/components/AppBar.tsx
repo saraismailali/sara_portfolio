@@ -21,7 +21,15 @@ import { useNavigate } from "react-router-dom";
 
 export interface AppBarProps {}
 
-const pages = ["About Me", "Experience", "Skills", "Projects", "Contact"];
+const pages = [
+  "About Me",
+  "Education",
+  "Experience",
+  "Skills",
+  "Projects",
+  "Certificates",
+  "Contact",
+];
 
 export const AppBar: React.FC<AppBarProps> = () => {
   const theme = useTheme();
@@ -36,7 +44,10 @@ export const AppBar: React.FC<AppBarProps> = () => {
   };
 
   const handleClickMenu = (item: string) => {
-    navigate(`#${pascalCase(item)}`);
+    const id = pascalCase(item);
+    navigate(`#${id}`);
+    // Scroll directly so clicking the same menu item twice still works
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setAnchorElNav(null);
   };
 

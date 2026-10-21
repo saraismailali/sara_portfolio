@@ -7,25 +7,48 @@ export const Footer = () => {
     <StyledFooter>
       <StyledContainer>
         <Box>
-          <IconButton href="tel:+966 56 287 3351" color="primary">
+          <IconButton
+            href="https://wa.me/966562873351"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            color="primary"
+          >
             <WhatsApp />
           </IconButton>
-          <IconButton href="mailto:saraismail4255@gmail.com" color="primary">
+          <IconButton
+            href="mailto:saraismail4255@gmail.com"
+            aria-label="Email"
+            color="primary"
+          >
             <Google />
           </IconButton>
-          <IconButton href="https://github.com/saraismailali" color="primary">
+          <IconButton
+            href="https://github.com/saraismailali"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            color="primary"
+          >
             <GitHub />
           </IconButton>
           <IconButton
             href="https://www.linkedin.com/in/sarrraaali/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
             color="primary"
           >
             <LinkedIn />
           </IconButton>
         </Box>
         <Typography variant="body1">
-          2024 © Powered By{" "}
-          <StyledLink href="https://www.linkedin.com/in/kerolos-magdy-314644212/">
+          {new Date().getFullYear()} © Powered By{" "}
+          <StyledLink
+            href="https://www.linkedin.com/in/kerolos-magdy-314644212/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Kerolos Magdy
           </StyledLink>
         </Typography>

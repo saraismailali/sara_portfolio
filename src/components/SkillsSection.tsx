@@ -76,7 +76,7 @@ const skills: Skill[] = [
     icon: <StorageOutlined fontSize="large" />,
   },
   {
-    name: "SQL (queries, joins, optimization)",
+    name: "SQL (joins, CTEs, window functions, optimization)",
     icon: <TableChartOutlined fontSize="large" />,
   },
   {
@@ -114,6 +114,22 @@ const skills: Skill[] = [
   {
     name: "Predictive Analytics",
     icon: <TrendingUpOutlined fontSize="large" />,
+  },
+  {
+    name: "Product Analytics (UXCam, WebEngage)",
+    icon: <InsightsOutlined fontSize="large" />,
+  },
+  {
+    name: "Funnel, Churn & Retention Analysis",
+    icon: <TrendingUpOutlined fontSize="large" />,
+  },
+  {
+    name: "Git & GitHub",
+    icon: <CodeOutlined fontSize="large" />,
+  },
+  {
+    name: "Linux & VMware",
+    icon: <BuildOutlined fontSize="large" />,
   },
   {
     name: "Problem-Solving",

@@ -34,6 +34,12 @@ export const Layout: React.FC<LayoutProps> = () => {
       setLoading(false);
     };
 
+    // If the page already finished loading (e.g. from cache), don't wait forever
+    if (document.readyState === "complete") {
+      handleLoad();
+      return;
+    }
+
     window.addEventListener("load", handleLoad);
 
     return () => {
