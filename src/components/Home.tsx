@@ -622,7 +622,7 @@ export const Home: React.FC = () => {
               <Atropos className="tilt fadein" key={c.name} rotateTouch="scroll-y" shadowScale={0.9} highlight rotateXMax={10} rotateYMax={10}>
               <article className={c.badge ? "card cert-card featured" : "card cert-card"}>
                 <button type="button" className={c.badge ? "cert-thumb badge" : "cert-thumb"} onClick={() => setCertOpen(i)} aria-label={`View ${c.name} certificate full size`}>
-                  <img src={c.thumb} alt={`${c.name} certificate – ${c.issuer}`} loading="lazy" decoding="async" />
+                  <img src={c.thumb} alt={`${c.name} certificate – ${c.issuer}`} loading={i < 4 ? "eager" : "lazy"} decoding="async" />
                 </button>
                 <div className="cert-body">
                   <h3 className="h-sm">{c.name}</h3>
