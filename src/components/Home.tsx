@@ -44,18 +44,56 @@ interface Project {
   demos?: { label: string; url: string }[];
 }
 
+/* Video that starts by itself (muted, looping) as soon as it is on screen */
+function CardVideo({ src, poster, label }: { src: string; poster?: string; label: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    v.muted = true;
+    const play = () => { v.play().catch(() => {}); };
+    if (!("IntersectionObserver" in window)) { play(); return; }
+    const io = new IntersectionObserver(
+      ([e]) => { if (e.isIntersecting) play(); else v.pause(); },
+      { threshold: 0.25 }
+    );
+    io.observe(v);
+    return () => io.disconnect();
+  }, [src]);
+  if (failed) return poster ? <img className="card-video" src={poster} alt={label} /> : null;
+  return (
+    <video
+      ref={ref}
+      className="card-video"
+      src={src}
+      poster={poster}
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls
+      preload="auto"
+      aria-label={label}
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
 const PROJECTS: Project[] = [
   {
-    name: "Sales & Profit Performance Dashboard",
-    category: "POWER BI",
-    groups: ["Power BI"],
-    metric: "15K+",
-    metricLabel: "transactions",
-    desc: "4 report pages built from Excel, CSV, PDF and four yearly sales files. Tracks revenue vs targets and YoY growth, and shows how 2023 discounts pushed sales below cost.",
-    tools: ["Power Query", "DAX", "Star schema"],
-    repo: "Power-BI-SALES-PROFIT-PERFORMANCE-DASHBOARD",
-  },
-  {
+    name: "Egyptian Sign Language Recognition",
+    category: "DEEP LEARNING · VIDEO DEMO",
+    groups: ["Python"],
+    metric: "90.5%",
+    metricLabel: "test accuracy",
+    desc: "Real-time translation of sign language into Arabic text: a CNN for 32 letters and an LSTM for 11 railway-station words (up to 92.7%), with a live webcam app.",
+    tools: ["TensorFlow", "LSTM", "MediaPipe"],
+    repo: "Egyptian-Sign-Language-Recognition-Using-Machine-Learning",
+    video: "https://dms.licdn.com/playlist/vid/v2/D4D05AQEa9IaH6Eh-jQ/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1687558904898?e=2147483647&v=beta&t=J3NpDekcULcrJszEJZeNvHpfGMyFAFkNx8tC-AfZwAg",
+    poster: "https://media.licdn.com/dms/image/v2/D4D05AQEa9IaH6Eh-jQ/videocover-high/videocover-high/0/1687558901125?e=2147483647&v=beta&t=E-YBL-L46O-V5-U5m9zCIYOhKWeXencPchFoDc0729Q",
+    demos: [{ label: "Watch on LinkedIn", url: "https://www.linkedin.com/feed/update/urn:li:activity:7078135053704175616/" }],
+  },  {
     name: "Sales & Profitability Analysis",
     category: "POWER BI · VIDEO DEMO",
     groups: ["Power BI"],
@@ -65,7 +103,29 @@ const PROJECTS: Project[] = [
     tools: ["Power Query", "DAX", "RANKX", "Segmentation"],
     video: "/videos/sales-analysis-demo.mp4",
     poster: "/videos/sales-analysis-demo.jpg",
+  },  {
+    name: "AdventureWorks BI Report",
+    category: "POWER BI · VIDEO DEMO",
+    groups: ["Power BI"],
+    metric: "35+",
+    metricLabel: "DAX measures",
+    desc: "5-page report on a star-schema model with YTD and rolling totals, KPIs against targets, a what-if price parameter, bookmarks and custom tooltips.",
+    tools: ["Time intelligence", "What-if", "Bookmarks"],
+    repo: "-Adventure-Works-Power-BI-Project",
+    video: "https://dms.licdn.com/playlist/vid/v2/D4D05AQF_TeSjkDFRwA/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1697915800593?e=2147483647&v=beta&t=JfASpVewUWLte52kcvz43yiqL-FWeS3bWjTzNIMG3WM",
+    poster: "https://media.licdn.com/dms/image/v2/D4D05AQF_TeSjkDFRwA/videocover-high/videocover-high/0/1697915796802?e=2147483647&v=beta&t=VjCwqwSgzsaK6vD8PpaDkwyQ8NjEi__ENcva4zOC1VA",
+    demos: [{ label: "Watch on LinkedIn", url: "https://www.linkedin.com/feed/update/urn:li:activity:7121575050301878272/" }],
+  },  {
+    name: "Sales & Profit Performance Dashboard",
+    category: "POWER BI",
+    groups: ["Power BI"],
+    metric: "15K+",
+    metricLabel: "transactions",
+    desc: "4 report pages built from Excel, CSV, PDF and four yearly sales files. Tracks revenue vs targets and YoY growth, and shows how 2023 discounts pushed sales below cost.",
+    tools: ["Power Query", "DAX", "Star schema"],
+    repo: "Power-BI-SALES-PROFIT-PERFORMANCE-DASHBOARD",
   },
+
   {
     name: "Hotel Revenue Analysis",
     category: "SQL SERVER + POWER BI",
@@ -76,16 +136,7 @@ const PROJECTS: Project[] = [
     tools: ["SSMS", "T-SQL", "Power BI"],
     repo: "Hotel-data-analysis-SQL-power-bi-",
   },
-  {
-    name: "AdventureWorks BI Report",
-    category: "POWER BI",
-    groups: ["Power BI"],
-    metric: "35+",
-    metricLabel: "DAX measures",
-    desc: "5-page report on a star-schema model with YTD and rolling totals, KPIs against targets, a what-if price parameter, bookmarks and custom tooltips.",
-    tools: ["Time intelligence", "What-if", "Bookmarks"],
-    repo: "-Adventure-Works-Power-BI-Project",
-  },
+
   {
     name: "Employee Database Analysis",
     category: "SQL",
@@ -106,20 +157,7 @@ const PROJECTS: Project[] = [
     tools: ["Power Query", "Power Pivot", "Slicers"],
     repo: "Excel-Sales-Profit-Quantity-Dashboards",
   },
-  {
-    name: "Egyptian Sign Language Recognition",
-    category: "DEEP LEARNING · GRADUATION",
-    groups: ["Python"],
-    metric: "90.5%",
-    metricLabel: "test accuracy",
-    desc: "Real-time translation of sign language into Arabic text: a CNN for 32 letters and an LSTM for 11 railway-station words (up to 92.7%), with a live webcam app.",
-    tools: ["TensorFlow", "LSTM", "MediaPipe"],
-    repo: "Egyptian-Sign-Language-Recognition-Using-Machine-Learning",
-    demos: [
-      { label: "Watch demo video 1", url: "https://www.linkedin.com/feed/update/urn:li:activity:7078135053704175616/" },
-      { label: "Watch demo video 2", url: "https://www.linkedin.com/feed/update/urn:li:activity:7121575050301878272/" },
-    ],
-  },
+
   {
     name: "Twitter Airline Sentiment",
     category: "POWER BI + SQL SERVER",
@@ -469,9 +507,7 @@ export const Home: React.FC = () => {
             {shown.map((p) => (
               <Atropos className="tilt fadein" key={p.name + filter} rotateTouch="scroll-y" shadowScale={0.9} highlight={!p.video} rotateXMax={p.video ? 6 : 15} rotateYMax={p.video ? 6 : 15}>
               <article className="card">
-                {p.video && (
-                  <video className="card-video" src={p.video} poster={p.poster} controls muted playsInline preload="none" aria-label={`${p.name} – video walkthrough`} />
-                )}
+                {p.video && <CardVideo src={p.video} poster={p.poster} label={`${p.name} – video walkthrough`} />}
                 <div className="card-top">
                   <span className="tag" data-atropos-offset="2">{p.category}</span>
                   <div className="metric" data-atropos-offset="5"><div className="metric-v">{p.metric}</div><div className="metric-l">{p.metricLabel}</div></div>
@@ -486,7 +522,6 @@ export const Home: React.FC = () => {
                   {p.demos?.map((d) => (
                     <a key={d.url} className="card-link demo" href={d.url} target="_blank" rel="noopener noreferrer"><Play /> {d.label}</a>
                   ))}
-                  {p.video && !p.repo && <span className="card-note">Press play to watch the report walkthrough</span>}
                 </div>
               </article>
               </Atropos>

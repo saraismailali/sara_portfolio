@@ -1,14 +1,10 @@
 # Project videos
 
-Put each project's screen recording in this folder with these exact names (MP4):
-
-| Project | File name |
+| Project card | Source |
 |---|---|
-| Global Superstore Sales Dashboard | `global-superstore.mp4` |
-| AdventureWorks Power BI Project | `adventureworks.mp4` |
-| Sign Language Recognition | `sign-language.mp4` |
-| COVID-19 Detection Using CNN | `covid-cnn.mp4` |
-| Data Wrangling and Visualization | `data-wrangling.mp4` |
+| Sales & Profitability Analysis | `sales-analysis-demo.mp4` (this folder, 1080p) + `sales-analysis-demo.jpg` poster |
+| Egyptian Sign Language Recognition | LinkedIn post 7078135053704175616 (720p, streamed from LinkedIn's CDN) |
+| AdventureWorks BI Report | LinkedIn post 7121575050301878272 (720p, streamed from LinkedIn's CDN) |
 
-Until a file is added, its card shows "Video coming soon".
-Keep each file under 100 MB (GitHub's limit); 30–90 seconds at 1080p is usually 10–40 MB.
+Videos autoplay muted and loop when the card scrolls into view (`CardVideo` in `src/components/Home.tsx`).
+To add one, drop an H.264 MP4 here (encode with `-movflags +faststart`) and set `video`/`poster` on the project in `PROJECTS`.
