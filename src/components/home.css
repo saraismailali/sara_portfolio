@@ -162,7 +162,7 @@ html { overflow-x: hidden; }
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 16px; }
 .skill-head { display: flex; align-items: center; gap: 10px; }
 .h-sm { font-family: Inter, sans-serif !important; font-size: 17px; font-weight: 600; }
-.certs-row { flex-direction: row; flex-wrap: wrap; }
+.certs-row { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
 .certs { flex: 2 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
 .edu { flex: 1 1 300px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
 .edu .card { gap: 8px; }

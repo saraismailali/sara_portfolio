@@ -283,7 +283,15 @@ const CERTS = [
   { name: "Microsoft Certified: Power BI Data Analyst Associate (PL-300)", meta: "Microsoft · 2025", link: "https://learn.microsoft.com/en-gb/users/saraali-1065/credentials/abde942c36385002" },
   { name: "Business Intelligence Analyst Course", meta: "365 Careers · 2024", link: "https://www.udemy.com/certificate/UC-a10bd0ea-2655-4db0-91ab-740ef59f599c/" },
   { name: "Thinking Like an Analyst", meta: "Maven Analytics · 2024", link: "https://certificates.mavenanalytics.io/bdf3a464-f42f-4bcd-895a-388e60e05ca1#acc.704b8Jsk" },
+  { name: "Microsoft Power BI Desktop for Business Intelligence", meta: "Udemy · 2023", link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-a4affd34-e899-4870-89a6-157dea7cb8b2.pdf" },
+  { name: "Foundations of Data Science", meta: "Google · Coursera · 2023", link: "https://www.coursera.org/account/accomplishments/verify/Z4FHBEZ4LMSW" },
+  { name: "Business Analytics with Excel", meta: "Johns Hopkins University · Coursera · 2023", link: "https://www.coursera.org/account/accomplishments/certificate/89BYS4C35HR5" },
   { name: "PostgreSQL Essential Training", meta: "LinkedIn Learning · 2023", link: "https://www.linkedin.com/learning/certificates/132b81c0693bfc071f8dc5bd99c9f6a666178be432e41c7cb7b1e7151e90a615" },
+  { name: "Databases: Relational Databases and SQL", meta: "edX · 2023", link: "https://courses.edx.org/certificates/8eaece324b8c4774934ba4be31caa351" },
+  { name: "Introduction to Databases", meta: "Meta · Coursera · 2023", link: "https://www.coursera.org/account/accomplishments/certificate/EHCH5UQ5CW8B" },
+  { name: "Understanding Data Engineering", meta: "DataCamp · 2023", link: "https://www.datacamp.com/statement-of-accomplishment/course/b32ee40a4fba66e55070bbfa0fd11b316fc0bf4b" },
+  { name: "Intermediate Importing Data in Python", meta: "DataCamp · 2023", link: "https://www.datacamp.com/statement-of-accomplishment/course/8736ce0997163ab48916fff85688791ba31ad7f9" },
+  { name: "Introduction to Programming Using Python", meta: "New Horizons · 2019", link: "https://drive.google.com/file/d/1r5JebFJ1n9avNRKpwcRdT2AGFyZw5Kqc/view" },
 ];
 
 /* ------------------------------------------------------------------ */
