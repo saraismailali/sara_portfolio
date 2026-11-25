@@ -42,6 +42,7 @@ interface Project {
   video?: string;
   poster?: string;
   demos?: { label: string; url: string }[];
+  featured?: boolean;
 }
 
 /* Video that starts by itself (muted, looping) as soon as it is on screen */
@@ -81,6 +82,66 @@ function CardVideo({ src, poster, label }: { src: string; poster?: string; label
 }
 
 const PROJECTS: Project[] = [
+  /* Featured: shown first. The rest appear under "Show more projects". */
+  {
+    name: "Sales & Profit Performance Dashboard",
+    category: "POWER BI",
+    groups: ["Power BI"],
+    metric: "15K+",
+    metricLabel: "transactions",
+    desc: "4 report pages built from Excel, CSV, PDF and four yearly sales files. Tracks revenue vs targets and YoY growth. Key finding: discounts rising to about 39% in 2023 pushed sales below cost.",
+    tools: ["Power Query", "DAX", "Star schema"],
+    repo: "Power-BI-SALES-PROFIT-PERFORMANCE-DASHBOARD",
+    featured: true,
+  },
+  {
+    name: "Sales & Profitability Analysis",
+    category: "POWER BI · VIDEO DEMO",
+    groups: ["Power BI"],
+    metric: "6",
+    metricLabel: "report pages",
+    desc: "Cleaned an uncleaned 9-table dataset in Power Query and built a 6-page report with 50+ DAX measures covering trends, discounts, profitability, customer segmentation and city performance.",
+    tools: ["Power Query", "DAX", "RANKX", "Segmentation"],
+    video: "/videos/sales-analysis-demo.mp4",
+    poster: "/videos/sales-analysis-demo.jpg",
+    featured: true,
+  },
+  {
+    name: "Hotel Revenue Analysis",
+    category: "SQL SERVER + POWER BI",
+    groups: ["SQL", "Power BI"],
+    metric: "3 yrs",
+    metricLabel: "of bookings",
+    desc: "Loaded booking data into SQL Server, combined it with T-SQL and built a Power BI report on revenue growth, hotel type, parking demand and seasonality.",
+    tools: ["SSMS", "T-SQL", "Power BI"],
+    repo: "Hotel-data-analysis-SQL-power-bi-",
+    featured: true,
+  },
+  {
+    name: "AdventureWorks BI Report",
+    category: "POWER BI · VIDEO DEMO",
+    groups: ["Power BI"],
+    metric: "35+",
+    metricLabel: "DAX measures",
+    desc: "5-page report on a star-schema model with YTD and rolling totals, KPIs against targets, a what-if price parameter, bookmarks and custom tooltips.",
+    tools: ["Time intelligence", "What-if", "Bookmarks"],
+    repo: "-Adventure-Works-Power-BI-Project",
+    video: "https://dms.licdn.com/playlist/vid/v2/D4D05AQF_TeSjkDFRwA/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1697915800593?e=2147483647&v=beta&t=JfASpVewUWLte52kcvz43yiqL-FWeS3bWjTzNIMG3WM",
+    poster: "https://media.licdn.com/dms/image/v2/D4D05AQF_TeSjkDFRwA/videocover-high/videocover-high/0/1697915796802?e=2147483647&v=beta&t=VjCwqwSgzsaK6vD8PpaDkwyQ8NjEi__ENcva4zOC1VA",
+    demos: [{ label: "Watch on LinkedIn", url: "https://www.linkedin.com/feed/update/urn:li:activity:7121575050301878272/" }],
+    featured: true,
+  },
+  {
+    name: "Employee Database Analysis",
+    category: "SQL",
+    groups: ["SQL"],
+    metric: "3",
+    metricLabel: "stored procedures",
+    desc: "Multi-table employee database analyzed with stored procedures, user-defined functions, CTEs, window functions and joins.",
+    tools: ["MySQL", "CTEs", "Window functions"],
+    repo: "SQL-employee-data-analysis",
+    featured: true,
+  },
   {
     name: "Egyptian Sign Language Recognition",
     category: "DEEP LEARNING · VIDEO DEMO",
@@ -93,59 +154,7 @@ const PROJECTS: Project[] = [
     video: "https://dms.licdn.com/playlist/vid/v2/D4D05AQEa9IaH6Eh-jQ/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1687558904898?e=2147483647&v=beta&t=J3NpDekcULcrJszEJZeNvHpfGMyFAFkNx8tC-AfZwAg",
     poster: "https://media.licdn.com/dms/image/v2/D4D05AQEa9IaH6Eh-jQ/videocover-high/videocover-high/0/1687558901125?e=2147483647&v=beta&t=E-YBL-L46O-V5-U5m9zCIYOhKWeXencPchFoDc0729Q",
     demos: [{ label: "Watch on LinkedIn", url: "https://www.linkedin.com/feed/update/urn:li:activity:7078135053704175616/" }],
-  },  {
-    name: "Sales & Profitability Analysis",
-    category: "POWER BI · VIDEO DEMO",
-    groups: ["Power BI"],
-    metric: "6",
-    metricLabel: "report pages",
-    desc: "Cleaned an uncleaned 9-table dataset in Power Query and built a 6-page report with 50+ DAX measures covering trends, discounts, profitability, customer segmentation and city performance.",
-    tools: ["Power Query", "DAX", "RANKX", "Segmentation"],
-    video: "/videos/sales-analysis-demo.mp4",
-    poster: "/videos/sales-analysis-demo.jpg",
-  },  {
-    name: "AdventureWorks BI Report",
-    category: "POWER BI · VIDEO DEMO",
-    groups: ["Power BI"],
-    metric: "35+",
-    metricLabel: "DAX measures",
-    desc: "5-page report on a star-schema model with YTD and rolling totals, KPIs against targets, a what-if price parameter, bookmarks and custom tooltips.",
-    tools: ["Time intelligence", "What-if", "Bookmarks"],
-    repo: "-Adventure-Works-Power-BI-Project",
-    video: "https://dms.licdn.com/playlist/vid/v2/D4D05AQF_TeSjkDFRwA/mp4-720p-30fp-crf28/mp4-720p-30fp-crf28/0/1697915800593?e=2147483647&v=beta&t=JfASpVewUWLte52kcvz43yiqL-FWeS3bWjTzNIMG3WM",
-    poster: "https://media.licdn.com/dms/image/v2/D4D05AQF_TeSjkDFRwA/videocover-high/videocover-high/0/1697915796802?e=2147483647&v=beta&t=VjCwqwSgzsaK6vD8PpaDkwyQ8NjEi__ENcva4zOC1VA",
-    demos: [{ label: "Watch on LinkedIn", url: "https://www.linkedin.com/feed/update/urn:li:activity:7121575050301878272/" }],
-  },  {
-    name: "Sales & Profit Performance Dashboard",
-    category: "POWER BI",
-    groups: ["Power BI"],
-    metric: "15K+",
-    metricLabel: "transactions",
-    desc: "4 report pages built from Excel, CSV, PDF and four yearly sales files. Tracks revenue vs targets and YoY growth, and shows how 2023 discounts pushed sales below cost.",
-    tools: ["Power Query", "DAX", "Star schema"],
-    repo: "Power-BI-SALES-PROFIT-PERFORMANCE-DASHBOARD",
-  },
-
-  {
-    name: "Hotel Revenue Analysis",
-    category: "SQL SERVER + POWER BI",
-    groups: ["SQL", "Power BI"],
-    metric: "3 yrs",
-    metricLabel: "of bookings",
-    desc: "Loaded booking data into SQL Server, combined it with T-SQL and built a Power BI report on revenue growth, hotel type, parking demand and seasonality.",
-    tools: ["SSMS", "T-SQL", "Power BI"],
-    repo: "Hotel-data-analysis-SQL-power-bi-",
-  },
-
-  {
-    name: "Employee Database Analysis",
-    category: "SQL",
-    groups: ["SQL"],
-    metric: "3",
-    metricLabel: "stored procedures",
-    desc: "Multi-table employee database analyzed with stored procedures, user-defined functions, CTEs, window functions and joins.",
-    tools: ["MySQL", "CTEs", "Window functions"],
-    repo: "SQL-employee-data-analysis",
+    featured: true,
   },
   {
     name: "Excel Sales, Profit & Quantity Dashboards",
@@ -157,7 +166,6 @@ const PROJECTS: Project[] = [
     tools: ["Power Query", "Power Pivot", "Slicers"],
     repo: "Excel-Sales-Profit-Quantity-Dashboards",
   },
-
   {
     name: "Twitter Airline Sentiment",
     category: "POWER BI + SQL SERVER",
@@ -241,6 +249,7 @@ const JOBS = [
     points: [
       "Built Power BI dashboards with KPIs aligned to business goals for every department.",
       "Delivered performance analyses that increased sales conversion by 5% and reduced churn by 3%.",
+      "Integrated funnel and user-behavior data from UXCam and WebEngage into departmental reports with tailored recommendations.",
       "Led monthly and quarterly reviews with all department leads and tracked follow-up actions to completion.",
       "Applied Row-Level Security and data quality checks to keep sensitive data accurate and protected.",
     ],
@@ -274,8 +283,9 @@ const JOBS = [
 
 const SKILLS = [
   { name: "Microsoft BI stack", gold: true, items: ["Power BI", "DAX", "Power Query", "SSRS", "SSIS", "Power Automate", "Row-Level Security"] },
+  { name: "Product analytics", gold: false, items: ["Funnel & conversion", "Churn & retention", "Customer segmentation", "UXCam", "WebEngage"] },
   { name: "Databases & SQL", gold: false, items: ["SQL Server", "T-SQL", "MySQL", "PostgreSQL", "CTEs", "Window functions", "Data warehousing"] },
-  { name: "Excel & analysis", gold: false, items: ["Power Pivot", "PivotTables", "KPI reporting", "Root-cause analysis", "Funnel analysis", "Tableau"] },
+  { name: "Excel & analysis", gold: false, items: ["Power Pivot", "PivotTables", "KPI reporting", "Root-cause analysis", "Tableau"] },
   { name: "Python & machine learning", gold: false, items: ["pandas", "scikit-learn", "TensorFlow", "R", "Web scraping"] },
 ];
 
@@ -387,6 +397,7 @@ const Send = () => (
 export const Home: React.FC = () => {
   const [theme, setTheme] = useState<"light" | "dark">(readStoredTheme);
   const [filter, setFilter] = useState<"All" | Tool>("All");
+  const [showAll, setShowAll] = useState(false);
   const [certOpen, setCertOpen] = useState<number | null>(null);
   useEffect(() => {
     if (certOpen === null) return;
@@ -414,6 +425,9 @@ export const Home: React.FC = () => {
     () => (filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.groups.includes(filter))),
     [filter]
   );
+  // On "All", lead with the featured projects; tool filters always show every match.
+  const visible = filter === "All" && !showAll ? shown.filter((p) => p.featured) : shown;
+  const hiddenCount = shown.length - visible.length;
 
   const pickTool = (t: Tool) => {
     setFilter(t);
@@ -464,7 +478,7 @@ export const Home: React.FC = () => {
             <h1>I turn business data into dashboards people actually use.</h1>
             <p className="lead">
               Microsoft Certified Power BI Data Analyst (PL-300) with 3 years of experience in Power BI, SQL Server,
-              DAX and Excel, building KPI reporting that leadership relies on.
+              DAX and Excel, building KPI reporting and product analytics (funnels, churn, retention) that leadership relies on.
             </p>
             <div className="row-gap">
               <a className="btn btn-primary" href="#projects">View my dashboards <Arrow /></a>
@@ -527,7 +541,7 @@ export const Home: React.FC = () => {
             ))}
           </div>
           <div className="project-grid">
-            {shown.map((p) => (
+            {visible.map((p) => (
               <Atropos className="tilt fadein" key={p.name + filter} rotateTouch="scroll-y" shadowScale={0.9} highlight={!p.video} rotateXMax={p.video ? 6 : 15} rotateYMax={p.video ? 6 : 15}>
               <article className="card">
                 {p.video && <CardVideo src={p.video} poster={p.poster} label={`${p.name} – video walkthrough`} />}
@@ -550,6 +564,13 @@ export const Home: React.FC = () => {
               </Atropos>
             ))}
           </div>
+          {filter === "All" && (hiddenCount > 0 || showAll) && (
+            <div className="more-row">
+              <button type="button" className="btn btn-ghost btn-sm" aria-expanded={showAll} onClick={() => setShowAll(!showAll)}>
+                {showAll ? "Show featured projects only" : `Show ${hiddenCount} more projects`}
+              </button>
+            </div>
+          )}
         </section>
 
         {/* EXPERIENCE */}
