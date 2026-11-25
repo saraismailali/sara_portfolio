@@ -76,9 +76,8 @@ export const AboutMeSection: React.FC<AboutMeSectionProps> = () => {
             <Typography variant="body1">
               Data Analyst with 3 years of experience and a Microsoft Certified:
               Power BI Data Analyst Associate (PL-300) certification. Builds
-              Power BI dashboards, KPI reporting and performance analyses that
-              have increased sales conversion by 5%, reduced customer churn by
-              3% and contributed to a 7% rise in quarterly revenue. Skilled in
+              Power BI dashboards, KPI reporting and performance analyses on
+              sales conversion, customer churn and revenue. Skilled in
               SQL (MySQL, PostgreSQL), Excel, Python and R for data collection,
               cleaning, ETL, data modeling, analysis and visualization.
               Experienced in turning complex datasets into clear, actionable

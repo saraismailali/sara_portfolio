@@ -30,9 +30,9 @@ const experiences: ExperienceItem[] = [
     period: "12/2024 - Present",
     location: "Jeddah, Saudi Arabia",
     description: [
-      "Developed Power BI dashboards with KPIs aligned to business goals, improving reporting efficiency by 80% and increasing dashboard adoption by 40%.",
-      "Delivered monthly and quarterly performance analyses whose insights increased sales conversion by 5% and reduced customer churn by 3%.",
-      "Partnered with cross-functional teams to close performance gaps, contributing to a 7% increase in quarterly revenue.",
+      "Developed Power BI dashboards with KPIs aligned to business goals, and trained users across departments to adopt them.",
+      "Delivered monthly and quarterly performance analyses on sales conversion and customer churn, with recommendations for each department.",
+      "Partnered with cross-functional teams to identify and close performance gaps.",
       "Produced monthly and quarterly departmental reports with tailored recommendations, integrating funnel and product analytics data from UXCam and WebEngage, and tracked follow-up actions through to execution.",
       "Led monthly and quarterly review meetings with all department leads to present findings and align on strategic actions.",
       "Performed root-cause analysis on data fluctuations and trends to inform strategic business decisions.",
@@ -46,7 +46,7 @@ const experiences: ExperienceItem[] = [
     period: "08/2023 - 08/2024",
     location: "Alexandria, Egypt",
     description: [
-      "Led the transition to a paperless workflow by implementing an electronic business system, reducing paper costs by 30% and improving the speed, security and accuracy of records.",
+      "Led the transition to a paperless workflow by implementing an electronic business system, improving the speed, security and accuracy of records.",
       "Analyzed performance metrics and KPIs across 100+ insurance companies to identify the strongest candidates for future partnerships.",
     ],
     svg: work1,

@@ -37,7 +37,7 @@ const projects: Project[] = [
   {
     name: "Senior Project – Sign Language Recognition",
     description:
-      "Vision-based machine learning system that translates Egyptian Sign Language into Arabic words and characters to improve railway communication, reducing communication obstacles by 40%.",
+      "Vision-based machine learning system that translates Egyptian Sign Language into Arabic words and characters for railway communication, reaching 90.5% test accuracy on letters.",
     tools: ["Python", "Computer Vision"],
     github:
       "https://github.com/saraismailali/Egyptian-Sign-Language-Recognition-Using-Machine-Learning",
