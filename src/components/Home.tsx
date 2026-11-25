@@ -229,10 +229,10 @@ const PROJECTS: Project[] = [
 ];
 
 const KPIS = [
-  { label: "Reporting efficiency", target: 80, note: "Power BI dashboards at SDC App" },
-  { label: "Dashboard adoption", target: 40, note: "after training users" },
-  { label: "Quarterly revenue", target: 7, note: "from performance insights" },
-  { label: "Sales conversion", target: 5, note: "and churn down 3%" },
+  { label: "BI experience", target: 3, suffix: " yrs", note: "Power BI, SQL Server, DAX" },
+  { label: "Portfolio projects", target: 13, suffix: "", note: "Power BI, SQL, Python, Excel" },
+  { label: "DAX measures", target: 50, suffix: "+", note: "in my largest Power BI report" },
+  { label: "Verified certificates", target: 13, suffix: "", note: "including Microsoft PL-300" },
 ];
 
 const JOBS = [
@@ -242,13 +242,13 @@ const JOBS = [
     dates: "DEC 2024 – PRESENT",
     place: "Jeddah, Saudi Arabia",
     stats: [
-      { v: "+80%", l: "reporting efficiency" },
-      { v: "+40%", l: "adoption" },
-      { v: "+7%", l: "quarterly revenue" },
+      { v: "Power BI", l: "KPI dashboards" },
+      { v: "All", l: "departments covered" },
+      { v: "UXCam", l: "& WebEngage data" },
     ],
     points: [
-      "Built Power BI dashboards with KPIs aligned to business goals for every department.",
-      "Delivered performance analyses that increased sales conversion by 5% and reduced churn by 3%.",
+      "Built Power BI dashboards with KPIs aligned to business goals for every department, and trained users to adopt them.",
+      "Delivered monthly and quarterly performance analyses on sales conversion and customer churn, with recommendations for each department.",
       "Integrated funnel and user-behavior data from UXCam and WebEngage into departmental reports with tailored recommendations.",
       "Led monthly and quarterly reviews with all department leads and tracked follow-up actions to completion.",
       "Applied Row-Level Security and data quality checks to keep sensitive data accurate and protected.",
@@ -260,11 +260,11 @@ const JOBS = [
     dates: "AUG 2023 – AUG 2024",
     place: "Alexandria, Egypt",
     stats: [
-      { v: "−30%", l: "paper costs" },
+      { v: "Paperless", l: "workflow rolled out" },
       { v: "100+", l: "companies analyzed" },
     ],
     points: [
-      "Led the move to a paperless workflow by implementing an electronic business system.",
+      "Led the move to a paperless workflow by implementing an electronic business system, improving the speed, security and accuracy of records.",
       "Analyzed KPIs across 100+ insurance companies to identify the strongest partnership candidates.",
     ],
   },
@@ -496,7 +496,7 @@ export const Home: React.FC = () => {
               {KPIS.map((k) => (
                 <div className="kpi" key={k.label}>
                   <div className="kpi-label">{k.label}</div>
-                  <div className="kpi-value">+{Math.round(k.target * progress)}%</div>
+                  <div className="kpi-value">{Math.round(k.target * progress)}{k.suffix}</div>
                   <div className="kpi-note">{k.note}</div>
                 </div>
               ))}
