@@ -242,12 +242,12 @@ const JOBS = [
     dates: "DEC 2024 – PRESENT",
     place: "Jeddah, Saudi Arabia",
     stats: [
-      { v: "Power BI", l: "KPI dashboards" },
-      { v: "All", l: "departments covered" },
+      { v: "6", l: "Power BI dashboards" },
+      { v: "5", l: "departments" },
       { v: "UXCam", l: "& WebEngage data" },
     ],
     points: [
-      "Built Power BI dashboards with KPIs aligned to business goals for every department, and trained users to adopt them.",
+      "Built 6 Power BI dashboards across 5 departments with KPIs aligned to business goals, and trained users to adopt them.",
       "Delivered monthly and quarterly performance analyses on sales conversion and customer churn, with recommendations for each department.",
       "Integrated funnel and user-behavior data from UXCam and WebEngage into departmental reports with tailored recommendations.",
       "Led monthly and quarterly reviews with all department leads and tracked follow-up actions to completion.",
