@@ -69,7 +69,7 @@ const certificates: CertificateItem[] = [
     name: "Microsoft Power BI Desktop for Business Intelligence",
     issuer: "Udemy",
     date: "Oct 21, 2023",
-    link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-a4affd34-e899-4870-89a6-157dea7cb8b2.pdf",
+    link: "https://www.udemy.com/certificate/UC-a4affd34-e899-4870-89a6-157dea7cb8b2/",
     image: img6,
   },
   {
